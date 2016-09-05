@@ -116,7 +116,9 @@ module.exports = function(grunt) {
 			cache: options.cache || path.join(__dirname, '..', '.cache'),
 			callback: options.callback,
 			customOutputs: options.customOutputs,
-			execMaxBuffer: options.execMaxBuffer || 1024 * 200
+			execMaxBuffer: options.execMaxBuffer || 1024 * 200,
+			globalHash: options.globalHash === true,
+			cremodDate: options.cremodDate ? (new Date(options.cremodDate)).getTime()/1000 : options.cremodDate
 		};
 
 		o = _.extend(o, {
@@ -227,6 +229,16 @@ module.exports = function(grunt) {
 			});
 
 			// Options
+			var optionsWithoutLocalPath = JSON.parse(JSON.stringify(o));
+			optionsWithoutLocalPath.cache = "";
+
+			// Options
+			if(o.globalHash){
+				md5.update(JSON.stringify(optionsWithoutLocalPath));
+			} else {
+				md5.update(JSON.stringify(o));
+			}
+
 			md5.update(JSON.stringify(o));
 
 			// grunt-webfont version

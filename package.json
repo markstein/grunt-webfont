@@ -1,21 +1,17 @@
 {
-  "name": "grunt-webfont",
-  "description": "Ultimate SVG to webfont converter for Grunt.",
-  "version": "1.6.0",
-  "homepage": "https://github.com/sapegin/grunt-webfont",
+  "name": "grunt-webfont4fb",
+  "description": "Ultimate SVG to webfont converter for Grunt | Fork 4 FB.",
+  "version": "1.6.2",
+  "homepage": "https://github.com/markstein/grunt-webfont",
   "author": {
-    "name": "Artem Sapegin",
-    "url": "http://sapegin.me/"
+    "name": "Fork of Mark Stein | Original from  Artem Sapegin "
   },
   "contributors": [
-    "Maxime Thirouin (http://moox.io/)"
+    "Mark Stein"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/sapegin/grunt-webfont.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sapegin/grunt-webfont/issues"
+    "url": "https://github.com/markstein/grunt-webfont.git"
   },
   "license": "MIT",
   "main": "tasks/webfont.js",

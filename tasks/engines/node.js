@@ -54,7 +54,12 @@ module.exports = function(o, allDone) {
 
 		ttf: function(done) {
 			getFont('svg', function(svgFont) {
-				var font = svg2ttf(svgFont, {});
+				var font = null;
+				if(o.cremodDate){
+					font = svg2ttf(svgFont, {"ts" : o.cremodDate});
+				} else {
+					font = svg2ttf(svgFont, {});
+				}
 				font = new Buffer(font.buffer);
 				autohintTtfFont(font, function(hintedFont) {
 					// ttfautohint is optional
