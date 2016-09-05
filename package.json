@@ -1,7 +1,7 @@
 {
   "name": "grunt-webfont4fb",
   "description": "Ultimate SVG to webfont converter for Grunt | Fork 4 FB.",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "homepage": "https://github.com/markstein/grunt-webfont",
   "author": {
     "name": "Fork of Mark Stein | Original from  Artem Sapegin "
